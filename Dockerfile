@@ -16,8 +16,8 @@ ENV LANG en_US.UTF-8
 RUN apt-get -qq update \
     && apt-get -qqy --no-install-recommends install \
     apt-utils \
-    openjdk-18-jdk \
-    openjdk-18-jre-headless \
+    openjdk-17-jdk \
+    openjdk-17-jre-headless \
     software-properties-common \
     build-essential \
     libstdc++6 \
