@@ -1,6 +1,6 @@
 FROM --platform=linux/amd64 ubuntu:22.04
 
-LABEL maintainer="messeb"
+LABEL maintainer="kamalhamoud"
     
 ENV ANDROID_SDK_TOOLS_VERSION 9477386
 ENV ANDROID_SDK_TOOLS_CHECKSUM bd1aa17c7ef10066949c88dc6c9c8d536be27f992a1f3b5a584f9bd2ba5646a0

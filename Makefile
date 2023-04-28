@@ -1,5 +1,5 @@
 IMAGE_TAG := $(IMAGE_TAG)
-IMAGE := mobiledevops/android-sdk-image
+IMAGE := kamalhamoud/android-sdk-image
 
 release: \
 	tag_image \
