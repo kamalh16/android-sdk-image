@@ -18,6 +18,23 @@ The [releases tags](https://github.com/mobiledevops/android-sdk-image/releases) 
 
 The image can be used on different cloud build services or own hosted pipeline solutions like Travis CI, CircleCI or GitLab CI/CD.
 
+### Bitbucket Pipelines
+
+Example:
+
+```
+# bitbucket-pipelines.yml
+
+image: kamalhamoud/android-sdk-image:latest
+
+pipelines:
+  pull-requests:
+    '**':
+      - step:
+      ...
+```
+
+
 ### CircleCI
 
 CircleCI supports the direct specification of a Docker image and checks out the source code in it: https://circleci.com/docs/2.0/circleci-images/
@@ -32,7 +49,7 @@ version: 2.1
 jobs:
   build:
     docker: 
-      - image: mobiledevops/android-sdk-image:33.0.2
+      - image: kamalhamoud/android-sdk-image:latest
     steps:
       - checkout
       - run:
@@ -59,7 +76,7 @@ services:
   - docker
 
 env:
-  - DOCKER_IMAGE=mobiledevops/android-sdk-image:33.0.2
+  - DOCKER_IMAGE=kamalhamoud/android-sdk-image:latest
 
 before_install:
   - docker pull $DOCKER_IMAGE
@@ -81,7 +98,7 @@ Example:
 
 ```
 # .gitlab-ci.yml
-image: mobiledevops/android-sdk-image:33.0.2
+image: kamalhamoud/android-sdk-image:latest
 
 stages:
     - build
